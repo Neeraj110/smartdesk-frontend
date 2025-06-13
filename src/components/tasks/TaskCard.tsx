@@ -20,6 +20,7 @@ const TaskCard = ({ task, setEditingTask }: any) => {
       );
     } catch (error) {
       toast.error("Failed to update task status");
+      console.error("Error updating task status:", error);
     }
   };
 
