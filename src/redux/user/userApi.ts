@@ -74,6 +74,14 @@ export const userApi = createApi({
       }),
       providesTags: ["User"],
     }),
+
+    resetPassword: builder.mutation<void, { email: string; password: string }>({
+      query: (value) => ({
+        url: "/reset-password",
+        method: "Post",
+        body: value,
+      }),
+    }),
   }),
 });
 
@@ -85,4 +93,5 @@ export const {
   useLogoutMutation,
   useUpdateUserMutation,
   useGetStatsQuery,
+  useResetPasswordMutation,
 } = userApi;

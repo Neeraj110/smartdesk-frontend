@@ -5,6 +5,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import type { User } from "@/types/types";
 import { Toaster } from "sonner";
 import { SidebarProvider } from "./components/contexts/SidebarContext";
+import ResetPassword from "./components/reset-Password/ResetPassword";
 
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
@@ -42,6 +43,10 @@ function App() {
             <Route
               path="/login"
               element={user ? <Navigate to="/dashboard" /> : <GoogleWrapper />}
+            />
+            <Route
+              path="/forgot-password"
+              element={user ? <Navigate to="/dashboard" /> : <ResetPassword />}
             />
             <Route
               path="/register"
