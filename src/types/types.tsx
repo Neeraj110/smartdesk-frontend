@@ -53,6 +53,7 @@ export interface DeleteTaskInput {
 }
 
 export interface Note {
+  data: any;
   fileType: string;
   _id: string;
   userId: string;
@@ -96,6 +97,7 @@ export interface DailyPlan {
 }
 
 export interface LearningGuide {
+  data: any;
   _id: string;
   userId: string;
   topic: string;
@@ -108,10 +110,6 @@ export interface LearningGuide {
 export interface CreateAiLearningInput {
   topic: string;
   durationDays: number;
-}
-
-export interface GetAiLearningInput {
-  userId: string;
 }
 
 export interface DeleteAiLearningInput {

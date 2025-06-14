@@ -3,7 +3,6 @@ import type {
   LearningGuide,
   CreateAiLearningInput,
   DeleteAiLearningInput,
-  GetAiLearningInput,
 } from "@/types/types";
 
 const baseUrl = `${import.meta.env.VITE_API_URL}/ai`;
@@ -25,7 +24,7 @@ export const aiLearningApi = createApi({
       }),
       invalidatesTags: ["AiLearning"],
     }),
-    getAiLearning: builder.query<LearningGuide[], GetAiLearningInput>({
+    getAiLearning: builder.query<LearningGuide[], void>({
       query: () => ({
         url: "/",
         method: "GET",

@@ -5,7 +5,6 @@ import {
   Calendar,
   Eye,
   Trash2,
-  Download,
   File,
   Brain,
   Sparkles,
@@ -36,6 +35,7 @@ const Notes = () => {
   const [activeTab, setActiveTab] = useState("text");
 
   const { data, isLoading } = useGetNotesQuery();
+
   const notes = data?.data || [];
 
   const [deleteNote] = useDeleteNoteMutation();
@@ -149,7 +149,7 @@ const Notes = () => {
                       {note.title}
                     </h3>
                   </div>
-                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-1 ">
                     <Button
                       variant="ghost"
                       size="icon"
@@ -160,14 +160,6 @@ const Notes = () => {
                       className="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
                     >
                       <Eye className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => window.open(note.originalNote, "_blank")}
-                      className="text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
-                    >
-                      <Download className="h-4 w-4" />
                     </Button>
                     <Button
                       variant="ghost"

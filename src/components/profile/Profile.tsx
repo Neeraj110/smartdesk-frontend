@@ -11,7 +11,6 @@ import {
   UserCircle,
   LogOut,
   Settings,
-  Camera,
 } from "lucide-react";
 import {
   useGetCurrentUserQuery,

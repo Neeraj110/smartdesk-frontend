@@ -4,7 +4,6 @@ import type {
   LoginInput,
   RegisterInput,
   GoogleLoginInput,
-  getCurrentUserResponse,
   LogoutResponse,
 } from "@/types/types";
 
@@ -43,7 +42,7 @@ export const userApi = createApi({
       invalidatesTags: ["User"],
     }),
 
-    getCurrentUser: builder.query<User, getCurrentUserResponse>({
+    getCurrentUser: builder.query<User, void>({
       query: () => ({
         url: "/current-user",
         method: "GET",
