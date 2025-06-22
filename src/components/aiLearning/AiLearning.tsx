@@ -345,7 +345,7 @@ const AiLearning = () => {
                     {selectedGuide.dailyPlan.map((plan: DailyPlan) => (
                       <div key={plan.day} className="mb-6">
                         <h3 className="text-base font-semibold text-slate-800 dark:text-slate-100 mb-2">
-                          Day {plan.day}: {plan.title}
+                          {plan.title}
                         </h3>
                         <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
                           {plan.description}
