@@ -99,5 +99,5 @@ Deploy to a custom domain or Vercel’s default URL (e.g., smartdesk-frontend-ho
 
 
 Contributing
-ork the repository.
+Fork the repository.
 
