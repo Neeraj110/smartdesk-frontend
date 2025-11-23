@@ -44,7 +44,7 @@ export const notesApi = createApi({
         const formData = new FormData();
         formData.append("title", title);
         if (text) formData.append("text", text);
-        if (file) formData.append("file", file);
+        if (file) formData.append("originalNote", file);
         if (summaryLength) formData.append("summaryLength", summaryLength);
         return {
           url: `/notes/${id}`,
